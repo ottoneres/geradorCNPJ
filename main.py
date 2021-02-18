@@ -25,7 +25,9 @@ Recap.
 """
 import cnpj
 from random import randint
-
+# O número de CNPJ inicia com 8 dígitos centrais que chamamos aqui de numero_parte1
+# o numero_parte2 indica se aquele CNPJ é de uma matriz ou filial, sendo incrementado por 1.
+# por exemplo, 0001 = matriz. 0002 = filial 1. 0003 = filial 2, etc. Portanto, geramos a segunda parte de forma diferente.
 numero_parte1 = randint(10000000, 99999999)
 numero_parte2 = randint(1, 10)
 
